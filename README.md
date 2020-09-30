@@ -25,3 +25,9 @@ Deployment steps:
 - Replace mysql environment varibales in `https://github.com/kolluri-rk/pcfapps-configrepo/blob/master/employee-directory-a1.yml`
 - create config server service `cf create-service p.config-server standard config-server -c gitconfig.json`
 - Push the app `cf push -f manifest-mysql-configserver.yml`
+
+
+## References:
+- https://github.com/mendix/cf-mendix-buildpack
+- https://github.com/macsux/config-server-buildpack
+- https://github.com/Pivotal-Field-Engineering/mendix-examples
