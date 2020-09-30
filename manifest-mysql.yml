@@ -1,0 +1,22 @@
+---
+applications:
+- name: employee-directory
+  memory: 1G
+  disk_quota: 1G
+  instances: 1
+  timeout: 300
+  path: employee-directory_1.0.0.2.mda
+  buildpacks: 
+  - https://github.com/mendix/cf-mendix-buildpack
+  env:
+    BUILDPACK_XTRACE: true
+    DEBUG_CONTAINER: false
+    LOGGING_CONFIG: {"MendixSSO": "TRACE"}
+    ADMIN_PASSWORD: Employee1234!
+    MXRUNTIME_DatabaseJdbcUrl: YOUR_MYSQL_JDBC_URL
+    MXRUNTIME_DatabasePassword: YOUR_MYSQL_PASSWORD
+    MXRUNTIME_DatabaseType: MySQL
+    MXRUNTIME_DatabaseUserName: YOUR_MYSQL_USERNAME
+  services:
+  - employee-directory-mysql
+

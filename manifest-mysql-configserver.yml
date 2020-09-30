@@ -1,0 +1,19 @@
+---
+applications:
+- name: employee-directory
+  memory: 1G
+  disk_quota: 1G
+  instances: 1
+  timeout: 300
+  path: employee-directory_1.0.0.2.mda
+  buildpacks: 
+  - https://github.com/macsux/config-server-buildpack/releases/download/v0.1.0/ConfigServerBuildpack-linux-x64-0.1.0.zip
+  - https://github.com/mendix/cf-mendix-buildpack
+  env:
+    SPRING__APPLICATION__NAME: employee-directory
+    SPRING__CLOUD__CONFIG__ENV: a1
+    SPRING__CLOUD__CONFIG__LABEL: master
+  services:
+  - employee-directory-mysql
+  - config-server
+

@@ -1,0 +1,12 @@
+---
+applications:
+- name: employee-directory
+  memory: 1G
+  disk_quota: 1G
+  instances: 1
+  timeout: 300
+  path: employee-directory_1.0.0.2.mda
+  buildpack: https://github.com/mendix/cf-mendix-buildpack
+  env:
+    ADMIN_PASSWORD: Employee1234!
+    BUILDPACK_XTRACE: true
