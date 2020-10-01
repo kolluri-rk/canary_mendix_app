@@ -2,7 +2,7 @@
 
 This is a sample mendix app that runs on TAS. 
 
-## employee-directory connecting to MySQL
+## Option-1: employee-directory connecting to MySQL
 
 Deployment steps:  
 
@@ -14,7 +14,7 @@ Deployment steps:
 - Push the app `cf push -f manifest-mysql.yml`
 
 
-## employee-directory connecting to MySQL and load mendix variables from config sever
+## Option-2: employee-directory connecting to MySQL and load mendix variables from config sever
 
 Deployment steps:  
 
